@@ -24,3 +24,13 @@ Running the application:
 10. You should get a confirmation the server is running on port 3000.
 
 11. Navigate to https://127.0.0.1:3000 on your browser. accept the self-signed certificate, and follow the onscreen prompts to test your application.
+
+
+
+# Install Following Dependencies:
+
+# Python:
+
+1. Install pip, numpy, ipython and nltk
+2. pip install -U textblob
+3. python -m textblob.download_corpora
