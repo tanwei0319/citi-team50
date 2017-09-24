@@ -24,12 +24,27 @@
     <a class="navbar-brand">Team 50</a>
   </div>
 </nav>
-    <div class="jumbotron"  style="padding:40px;">
+    <div class="jumbotron" style="padding:40px;">
       <div id="container" style="z-index: -1"></div>
     </div>
 
 	<div class="container outlet">
-		<p id="score">Good job! Your current sentiment score is <strong>75 </strong></p>
+		
+    <div class="row">
+    	<p id="score">Good job! Your current sentiment score is <strong>76 </strong></p> <div class="container">
+        <!-- <div class="col-md-3 col-sm-6"> -->
+            <div class="progress yellow" style="z-index: 0">
+                <span class="progress-left">
+                    <span class="progress-bar"></span>
+                </span>
+                <span class="progress-right">
+                    <span class="progress-bar"></span>
+                </span>
+                <div class="progress-value">76%</div>
+            </div>
+       <!--  </div> -->
+    </div>
+</div>
 	<table class="table table-striped">
   <thead>
     <tr>
@@ -116,9 +131,10 @@
 </table>
 	</div>
 </div>
-<br><br><br><br>
+<br><br><br><br><br><br>
   <div class="footer" id="footer">
   <div class="footer container">
+  	<p><strong>== Backend System Log ==</strong></p>
     <div class="row">
         <div class="form-group name1 col-md-5">
             <label for="exampleInputEmail1" class="formText">Purchase</label>
