@@ -46,7 +46,7 @@ Highcharts.chart('container', {
         data: [10, 30, 40, 15, 20, 10, 30, 34, 43, 50, 24, 22]
     }, {
         name: 'Sentiment Score',
-        data: [2, , 3, -5, 6, 7, 1, -3, 7, 4, 3, 2]
+        data: [20, 0, 30, -50, 60, 70, 10, -30, 70, 40, 30, 20]
     }],
 
     responsive: {

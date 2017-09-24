@@ -1,7 +1,7 @@
 .container.outlet {
     box-shadow: 0px 5px 20px 5px rgba(0,0,0,0.2);
     width: 1100px;
-    height: 550px;
+    height: 620px;
     margin: 0 auto;
     background-color: white; 
     padding-top: 15px;
@@ -16,7 +16,7 @@
 
 #footer {
     background-color: beige;
-    position: relative;
+    position: fixed;
     bottom: 0;
     width: 100%;
 }
@@ -27,6 +27,7 @@
 
 .alert {
     display: none;
+    position: fixed;
 }
 
 #container {
@@ -34,4 +35,9 @@
     max-width: 800px;
     height: 400px;
     margin: 0 auto
+}
+
+#score {
+    font-size: 20px;
+    padding: 10px 25px;
 }
