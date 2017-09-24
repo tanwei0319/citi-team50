@@ -19,6 +19,7 @@ const axios = require('axios');
 const querystring = require('querystring');
 const config = require('./config.json');
 
+
 //Constants for API access
 const TOKEN_URL = "https://sandbox.apihub.citi.com/gcb/api/authCode/oauth2/token/us/gcb"; //HTTPS endpoint to retrieve token
 const ACCOUNTS_URL = "https://sandbox.apihub.citi.com/gcb/api/v2/accounts"; //HTTPS endpoint to retrieve account summary
@@ -41,6 +42,8 @@ const ex = require("express");
 const app = express();
 app.use(ex.static(__dirname));
 app.use(ex.static("views"));
+// app.use(express.static(path.join(__dirname, 'views'), {index: 'login.html'}))
+//app.use(express.static(path.join(__dirname, 'views'), {index: '_'}));
 
 // Parsers for POST data
 app.use(bodyParser.json());
