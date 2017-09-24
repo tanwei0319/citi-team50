@@ -1,10 +1,11 @@
 {
-  "name": "sample_app",
+  "name": "impulsecurb",
   "version": "1.0.0",
   "description": "A sample application to demonstrate three-legged OAuth and basic account information retrieval",
-  "main": "index.js",
+  "main": "website.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "author": "Test",
   "license": "ISC",
@@ -12,6 +13,23 @@
     "async": "^2.3.0",
     "axios": "^0.16.1",
     "body-parser": "^1.17.1",
-    "express": "^4.15.2"
-  }
+    "express": "^4.15.4"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tanwei0319/citi-team50.git"
+  },
+  "keywords": [
+    "citi",
+    "spending",
+    "impulse"
+  ],
+  "bugs": {
+    "url": "https://github.com/tanwei0319/citi-team50/issues"
+  },
+  "homepage": "https://github.com/tanwei0319/citi-team50#readme"
 }
