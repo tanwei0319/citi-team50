@@ -19,19 +19,12 @@ function show (elements, specifiedDisplay) {
 Highcharts.chart('container', {
 
     title: {
-<<<<<<< HEAD
+
         text: 'Did you spend happily?'
     },
 
     subtitle: {
         text: "Let's find out"
-=======
-        text: 'User Spending Data'
-    },
-
-    subtitle: {
-        text: 'Source: citibank.com'
->>>>>>> a0a3443da6c58094988c2173fa617f30eb4e1355
     },
 
     yAxis: {
