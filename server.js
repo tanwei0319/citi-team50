@@ -37,7 +37,10 @@ var tempEncoding = new Buffer(CLIENT_ID + ":" + CLIENT_SECRET);
 const ENCODED_ID_SECRET = "Basic " + tempEncoding.toString('base64');
 
 //initialize express
-var app = express();
+const ex = require("express");
+const app = express();
+app.use(ex.static(__dirname));
+app.use(ex.static("views"));
 
 // Parsers for POST data
 app.use(bodyParser.json());
@@ -98,17 +101,25 @@ app.get('/accounts/*', function (req, res) {
 	}
 });
 
-app.get('/index', function (req, res) {
-  res.sendFile(path.join(__dirname + "/views/index.html"));
-});
+// app.get('/index.css', function(req, res) {
+//   res.sendFile(path.join(__dirname + "/views/index.css"));
+// });
 
-app.get('/about', function (req, res) {
-  res.sendFile(path.join(__dirname + "/views/about.html"));
-});
+// app.get('/index.js', function(req, res) {
+//   res.sendFile(path.join(__dirname + "/views/index.js"));
+// });
 
-app.get('/product', function (req, res) {
-  res.sendFile(path.join(__dirname + "/views/product.html"));
-});
+// app.get('/index', function (req, res) {
+//   res.sendFile(path.join(__dirname + "/views/index.html"));
+// });
+
+// app.get('/about', function (req, res) {
+//   res.sendFile(path.join(__dirname + "/views/about.html"));
+// });
+
+// app.get('/product', function (req, res) {
+//   res.sendFile(path.join(__dirname + "/views/product.html"));
+// });
 
 //routing for entry point of application, handles all urls except for accounts/
 app.get('*', function (req, res) {
