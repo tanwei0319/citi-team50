@@ -40,10 +40,19 @@ const ENCODED_ID_SECRET = "Basic " + tempEncoding.toString('base64');
 //initialize express
 const ex = require("express");
 const app = express();
-// app.use(ex.static(__dirname));
-// app.use(ex.static("views"));
+
 // app.use(express.static(path.join(__dirname, 'views'), {index: 'login.html'}))
 //app.use(express.static(path.join(__dirname, 'views'), {index: '_'}));
+//app.use(express.static('/views/', {index: 'login.html'}))
+
+//routing for entry point of application, handles all urls except for accounts/
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname + "/login.html"));
+});
+
+
+app.use(ex.static(__dirname));
+app.use(ex.static("views"));
 
 // Parsers for POST data
 app.use(bodyParser.json());
@@ -120,11 +129,6 @@ app.get('/accounts/*', function (req, res) {
 // app.get('/product', function (req, res) {
 //   res.sendFile(path.join(__dirname + "/views/product.html"));
 // });
-
-//routing for entry point of application, handles all urls except for accounts/
-app.get('*', function (req, res) {
-  res.sendFile(path.join(__dirname + "/login.html"));
-});
 
 //port assignment for local server
 const port = process.env.PORT || '3000';
