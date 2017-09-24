@@ -19,11 +19,11 @@ function show (elements, specifiedDisplay) {
 Highcharts.chart('container', {
 
     title: {
-        text: 'Solar Employment Growth by Sector, 2010-2016'
+        text: 'Did you spend happily?'
     },
 
     subtitle: {
-        text: 'Source: thesolarfoundation.com'
+        text: "Let's find out"
     },
 
     yAxis: {
@@ -40,18 +40,12 @@ Highcharts.chart('container', {
         verticalAlign: 'middle'
     },
 
-    plotOptions: {
-        series: {
-            pointStart: 2010
-        }
-    },
-
     series: [{
         name: 'Transaction Amount',
-        data: [43934, 52503, 57177, 69658, 60000, 50000, 137133, 50000, 34000, 154175, 12000, 10000]
+        data: [10, 30, 40, 15, 20, 10, 30, 34, 43, 50, 24, 22]
     }, {
         name: 'Sentiment Score',
-        data: [24916, 24064, 70000, 29851, 60000, 30282, 38121, 40434, 30000, 50000, 60000, 90000]
+        data: [2, , 3, -5, 6, 7, 1, -3, 7, 4, 3, 2]
     }],
 
     responsive: {
