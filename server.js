@@ -40,8 +40,8 @@ const ENCODED_ID_SECRET = "Basic " + tempEncoding.toString('base64');
 //initialize express
 const ex = require("express");
 const app = express();
-app.use(ex.static(__dirname));
-app.use(ex.static("views"));
+// app.use(ex.static(__dirname));
+// app.use(ex.static("views"));
 // app.use(express.static(path.join(__dirname, 'views'), {index: 'login.html'}))
 //app.use(express.static(path.join(__dirname, 'views'), {index: '_'}));
 
@@ -85,18 +85,15 @@ app.get('/accounts/*', function (req, res) {
 					// 	);
 					//start.js
 					var spawn = require('child_process').spawn,
-					    py    = spawn('python', ["compute_input.py"]),
-					    data = [1,2,3,4,5,6,7,8,9],
+					    py    = spawn('python', ["telesign.py"]),
 					    dataString = '';
 
 					py.stdout.on('data', function(data){
 					  dataString += data.toString();
 					});
 					py.stdout.on('end', function(){
-					  console.log('Sum of numbers=',dataString);
+					  console.log('Message=',"This is a huge purchase that doesn't seem to fall within your usual spending habits. Are you sure you are okay with it?");
 					});
-					py.stdin.write(JSON.stringify(data));
-					py.stdin.end();
 					res.sendFile(path.join(__dirname + "/views/index.html"));
 				}
 			}
