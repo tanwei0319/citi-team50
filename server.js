@@ -98,6 +98,10 @@ app.get('/accounts/*', function (req, res) {
 	}
 });
 
+app.get('/index', function (req, res) {
+  res.sendFile(path.join(__dirname + "/views/index.html"));
+});
+
 app.get('/about', function (req, res) {
   res.sendFile(path.join(__dirname + "/views/about.html"));
 });
