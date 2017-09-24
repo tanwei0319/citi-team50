@@ -19,11 +19,11 @@ function show (elements, specifiedDisplay) {
 Highcharts.chart('container', {
 
     title: {
-        text: 'Solar Employment Growth by Sector, 2010-2016'
+        text: 'User Spending Data'
     },
 
     subtitle: {
-        text: 'Source: thesolarfoundation.com'
+        text: 'Source: citibank.com'
     },
 
     yAxis: {
