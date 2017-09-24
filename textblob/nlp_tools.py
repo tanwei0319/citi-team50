@@ -28,7 +28,6 @@ for sentence in blob.sentences:
 
 def getPolarity(text):
 	blob = Textblob(text)
-	return blob.sentiment.polarity
+	print (blob.sentiment.polarity)
 
-def 
 
