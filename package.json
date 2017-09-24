@@ -13,7 +13,8 @@
     "async": "^2.3.0",
     "axios": "^0.16.1",
     "body-parser": "^1.17.1",
-    "express": "^4.15.4"
+    "express": "^4.15.4",
+    "highcharts": "^5.0.14"
   },
   "directories": {
     "test": "tests"
