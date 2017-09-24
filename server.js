@@ -72,15 +72,38 @@ app.get('/accounts/*', function (req, res) {
 					res.send('<h1>Something Went Wrong. Try again.</h1><p>Error: ' + err + '</p>');
 				} else {
 					//Success: send account information
-					res.send(
-						'<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script><pre class="prettyprint">' +
-						successfulAccount + 
-						'</pre>'
-						);
+					// res.send(
+					// 	'<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script><pre class="prettyprint">' +
+					// 	successfulAccount + 
+					// 	'</pre>'
+					// 	);
+					//start.js
+					var spawn = require('child_process').spawn,
+					    py    = spawn('python', ['compute_input.py']),
+					    data = [1,2,3,4,5,6,7,8,9],
+					    dataString = '';
+
+					py.stdout.on('data', function(data){
+					  dataString += data.toString();
+					});
+					py.stdout.on('end', function(){
+					  console.log('Sum of numbers=',dataString);
+					});
+					py.stdin.write(JSON.stringify(data));
+					py.stdin.end();
+					res.sendFile(path.join(__dirname + "/views/index.html"));
 				}
 			}
 		);
 	}
+});
+
+app.get('/about', function (req, res) {
+  res.sendFile(path.join(__dirname + "/views/about.html"));
+});
+
+app.get('/product', function (req, res) {
+  res.sendFile(path.join(__dirname + "/views/product.html"));
 });
 
 //routing for entry point of application, handles all urls except for accounts/
